@@ -51,7 +51,7 @@ public class BookController {
 
     @DeleteMapping("deleteById/{id}")
     public ResponseEntity deleteById(@PathVariable Long id){
-
+        String b;
         try {
             service.deleteById(id);
         }catch (EmptyResultDataAccessException e){
