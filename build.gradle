@@ -6,7 +6,7 @@ plugins {
 
 group 'org.bookManager'
 version 'v1'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
     compileOnly {
@@ -17,6 +17,12 @@ configurations {
 repositories {
     mavenCentral()
 }
+
+//jar {
+//    manifest {
+//        attributes 'Main-Class': 'org.bookManager.backendSpringBoot.BackendSpringbootApplication'
+//    }
+//}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
