@@ -39,7 +39,7 @@ public class AuthorController {
 
     @GetMapping("/getById/{id}")
     public ResponseEntity<Author> getById(@PathVariable Long id){
-
+        String face;
         Author author;
         try{
             author = service.findById(id);
