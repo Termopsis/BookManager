@@ -3,6 +3,8 @@ package org.bookManager.backendSpringBoot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.time.*;
+import java.time.format.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -16,14 +18,19 @@ public class BackendSpringbootApplication {
     public static void main(String[] args) {
         System.out.println("Start application...");
 
-        for (int i = 0; i < args.length; i++) {
-            //Создаем столько очередей сколько типов нам передали
-            //Так же еще надо где то указывать сколько потоков будет обрабатывать их По 5 на каждую очередь или
-            listOfQueue.put(args[i],new PriorityQueue());
-        }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM");
+        LocalDate localDate = LocalDate.parse("01.01", formatter);
+        System.out.println(localDate);
 
-        SpringApplication.run(BackendSpringbootApplication.class, args);
-        System.out.println("Application is running!");
+
+//        for (int i = 0; i < args.length; i++) {
+//            //Создаем столько очередей сколько типов нам передали
+//            //Так же еще надо где то указывать сколько потоков будет обрабатывать их По 5 на каждую очередь или
+//            listOfQueue.put(args[i],new PriorityQueue());
+//        }
+
+        //SpringApplication.run(BackendSpringbootApplication.class, args);
+        //System.out.println("Application is running!");
     }
 
 }

@@ -9,7 +9,7 @@ import javax.print.DocFlavor;
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Service
+@Service(TestService.NAME)
 @Transactional
 public class AuthorService {
 
